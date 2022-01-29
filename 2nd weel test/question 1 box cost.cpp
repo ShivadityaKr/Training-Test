@@ -91,7 +91,7 @@ class Box{			//box
 			this->height = height;
 			this->part = part;
 		}
-		int calculateCost(Flute flute){
+		long long int calculateCost(Flute flute){
 			area = length*height*width;
 			totalGSM = (flute.extraGSM+flute.GSM)*100;
 			
