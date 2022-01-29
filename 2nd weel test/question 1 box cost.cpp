@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-class Flute{
+class Flute{		//flute
 	public:
 		int GSM;	//assigning it default value 
 		int extraGSM;
@@ -8,43 +8,43 @@ class Flute{
 			GSM = 10;  //assigned a default value 10
 		}
 };
-class FluteA : public Flute{
+class FluteA : public Flute{ 	//A
 	public:
 		FluteA(){
 			this->extraGSM = 10;
 		}
 };
-class FluteB : public Flute{
+class FluteB : public Flute{	//B
 	public:
 		FluteB(){
 			this->extraGSM = 30;
 		}
 };
-class FluteC : public Flute{
+class FluteC : public Flute{	//C
 	public:
 		FluteC(){
 			this->extraGSM = 20;
 		}
 };
-class FluteE : public Flute{
+class FluteE : public Flute{	//E
 	public:
 		FluteE(){
 			this->extraGSM = 40;
 		}
 };
-class FluteF : public Flute{
+class FluteF : public Flute{	//F
 	public:
 		FluteF(){
 			this->extraGSM = 50;
 		}
 };
-class FluteG : public Flute{
+class FluteG : public Flute{	//G
 	public:
 		FluteG(){
 			this->extraGSM = 20;
 		}
 };
-class Pin{
+class Pin{			//pin
 	int cost;
 	public:
 		int getCost(int amount){
@@ -52,7 +52,7 @@ class Pin{
 			return cost;
 		}
 };
-class Paste{
+class Paste{		//paste
 	int cost;
 	public:
 		int getCost(string type){
@@ -70,7 +70,7 @@ class Paste{
 		}
 		
 };
-class Box{
+class Box{			//box
 	int length;
 	int height;
 	int width;
@@ -111,31 +111,31 @@ class Box{
 			if(part==2) stitchingCost*=3;
 		}
 };
-class Universal : public Box{
+class Universal : public Box{ 	//Universal
 	public:
 		Universal(){
 			type = "Universal";
 		}
 };
-class AllFlapMeeting : protected Box{
+class AllFlapMeeting : public Box{		 //AllFlapMeeting
 	public:
 		AllFlapMeeting(){
 			type = "AllFlapMeeting";
 		}
 };
-class HoneyComb : protected Box{
+class HoneyComb : public Box{		//HoneyComb
 	public:
 		HoneyComb(){
 			type = "HoneyComb";
 		}
 };
-class ReverseTuckIn : protected Box{
+class ReverseTuckIn : public Box{		//ReverseTuckIn
 	public:
 		ReverseTuckIn(){
 			type = "ReverseTuckIn";
 		}
 };
-class TopOpeningSnapLock : protected Box{
+class TopOpeningSnapLock : public Box{ 	//TopOpeningSnapLock
 	public:
 		TopOpeningSnapLock(){
 			type = "TopOpeningSnapLock";
